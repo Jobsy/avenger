@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Router, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 
-function home(props) {
+function Home(props) {
   return <h1>Home Component</h1>
 }
-function about(props) {
+function About(props) {
   return <h1>About Component</h1>
 }
-function contact(props) {
+function Contact(props) {
   return <h1>Contact Component</h1>
 }
 
@@ -22,6 +22,11 @@ function App() {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
+
+        
+        <Route path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
         </BrowserRouter>
       </header>
     </div>
